@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, Layers, Github, Linkedin, ArrowLeft } from 'lucide-react';
+import { Terminal, Layers, GitHub, Linkedin, ArrowLeft } from 'lucide-react';
 
 export default function AboutNow({ onBackToHome, onViewDaksh, onViewDrishti }) {
   const SDEs = [
