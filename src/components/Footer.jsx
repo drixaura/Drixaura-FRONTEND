@@ -7,6 +7,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
+
         {/* Brand column */}
         <div>
           <a href="#home" className="logo">
@@ -23,14 +24,16 @@ export default function Footer() {
             </svg>
             <span>DRIXAURA</span>
           </a>
+
           <p className="footer-desc">
             Bespoke engineering, immersive design, and high-performance software architecture.
           </p>
         </div>
 
-        {/* Quick Links Column */}
+        {/* Navigation */}
         <div>
           <h4 className="footer-col-title">Navigation</h4>
+
           <ul className="footer-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#portfolio">Softwares</a></li>
@@ -39,9 +42,10 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Legal/Info Column */}
+        {/* Standards */}
         <div>
           <h4 className="footer-col-title">Core Standards</h4>
+
           <ul className="footer-links">
             <li><a href="#security">Privacy Policy</a></li>
             <li><a href="#security">Performance Auditing</a></li>
@@ -50,27 +54,61 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Connect Column */}
+        {/* Social */}
         <div>
           <h4 className="footer-col-title">Connect</h4>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '15px' }}>
+
+          <p
+            style={{
+              fontSize: "0.9rem",
+              color: "var(--text-muted)",
+              marginBottom: "15px"
+            }}
+          >
             Follow our open source repositories and co-development projects.
           </p>
+
           <div className="social-links">
-            <a href="https://github.com" className="social-icon" target="_blank" rel="noreferrer" aria-label="Github Profile">
-              <Github size={18} />
+            <a
+              href="https://github.com"
+              className="social-icon"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub Profile"
+            >
+              <FaGithub size={18} />
             </a>
-            <a href="https://linkedin.com" className="social-icon" target="_blank" rel="noreferrer" aria-label="Linkedin Profile">
-              <Linkedin size={18} />
+
+            <a
+              href="https://linkedin.com"
+              className="social-icon"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn Profile"
+            >
+              <FaLinkedin size={18} />
             </a>
-            <a href="https://twitter.com" className="social-icon" target="_blank" rel="noreferrer" aria-label="Twitter Profile">
-              <Twitter size={18} />
+
+            <a
+              href="https://twitter.com"
+              className="social-icon"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Twitter Profile"
+            >
+              <FaXTwitter size={18} />
             </a>
-            <a href="mailto:drixaura@gmail.com" className="social-icon" aria-label="Email Support">
+
+            <a
+              href="mailto:drixaura@gmail.com"
+              className="social-icon"
+              aria-label="Email Support"
+            >
               <Mail size={18} />
             </a>
           </div>
         </div>
+
       </div>
 
       <div className="footer-bottom">
