@@ -1,5 +1,6 @@
 import React from 'react';
-import { Terminal, Layers, GitHub, Linkedin, ArrowLeft } from 'lucide-react';
+import { Terminal, Layers, ArrowLeft } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function AboutNow({ onBackToHome, onViewDaksh, onViewDrishti }) {
   const SDEs = [
@@ -9,7 +10,19 @@ export default function AboutNow({ onBackToHome, onViewDaksh, onViewDrishti }) {
       icon: <Terminal size={18} />,
       image: '/daksh_avatar.jpg',
       bio: 'Daksh Bhatt is a hands-on Full Stack Developer and Computer Science Engineering student specializing in building responsive web applications and scalable backend systems. Currently developing production-ready web platforms, he integrates RESTful APIs with PostgreSQL and Firebase while building fluid, responsive interfaces using React and Tailwind CSS.',
-      skills: ['React.js', 'JavaScript', 'Tailwind CSS', 'PostgreSQL', 'Firebase', 'REST APIs', 'Database Design', 'Database Architecture', 'Git', 'Figma', 'Postman'],
+      skills: [
+        'React.js',
+        'JavaScript',
+        'Tailwind CSS',
+        'PostgreSQL',
+        'Firebase',
+        'REST APIs',
+        'Database Design',
+        'Database Architecture',
+        'Git',
+        'Figma',
+        'Postman'
+      ],
       github: 'https://github.com/Daksh2828',
       linkedin: 'https://linkedin.com/in/daksh-bhatt-8a8a7b304',
       glowClass: ''
@@ -20,7 +33,20 @@ export default function AboutNow({ onBackToHome, onViewDaksh, onViewDrishti }) {
       icon: <Layers size={18} />,
       image: '/drishti_avatar.png',
       bio: 'Drishti is a creative Full Stack Software Development Engineer (SDE) with a strong focus on responsive frontend architectures, micro-interactions, and premium UI/UX design. She specializes in crafting seamless glassmorphic interfaces using React, Next.js, and vanilla CSS, backed by robust server-side controllers in Node.js. Drishti prioritizes performance tuning, SEO positioning, and fluid usability, transforming complex logic into elegant digital experiences.',
-      skills: ['React.js', 'Next.js', 'Vanilla CSS', 'UI/UX Design', 'Figma', 'Web Vitals', 'Framer Motion', 'Tailwind CSS', 'Redux', 'REST APIs', 'Node.js', 'Responsive Engineering'],
+      skills: [
+        'React.js',
+        'Next.js',
+        'Vanilla CSS',
+        'UI/UX Design',
+        'Figma',
+        'Web Vitals',
+        'Framer Motion',
+        'Tailwind CSS',
+        'Redux',
+        'REST APIs',
+        'Node.js',
+        'Responsive Engineering'
+      ],
       github: 'https://github.com/drishti',
       linkedin: 'https://linkedin.com/in/drishti',
       glowClass: 'reverse-glow',
@@ -29,9 +55,17 @@ export default function AboutNow({ onBackToHome, onViewDaksh, onViewDrishti }) {
   ];
 
   return (
-    <section id="about-now" className="section" style={{ minHeight: '92vh', paddingTop: '130px', paddingBottom: '80px' }}>
+    <section
+      id="about-now"
+      className="section"
+      style={{
+        minHeight: '92vh',
+        paddingTop: '130px',
+        paddingBottom: '80px'
+      }}
+    >
       <div className="reveal" style={{ marginBottom: '35px' }}>
-        <button 
+        <button
           onClick={onBackToHome}
           className="btn btn-secondary"
           style={{
@@ -53,49 +87,75 @@ export default function AboutNow({ onBackToHome, onViewDaksh, onViewDrishti }) {
           About <span className="gradient-accent-text">Now</span>
         </h2>
         <p className="section-subtitle">
-          The software engineers and system designers shaping custom solutions from concept to deployment.
+          The software engineers and system designers shaping custom solutions
+          from concept to deployment.
         </p>
       </div>
 
       <div className="creators-container">
         {SDEs.map((sde, index) => (
-          <div 
-            key={index} 
-            className={`creator-profile glass reveal ${sde.reverse ? 'reverse' : ''}`}
-            style={{ 
-              transitionDelay: `${index * 200}ms`
-            }}
+          <div
+            key={index}
+            className={`creator-profile glass ${sde.reverse ? 'reverse' : ''} reveal`}
+            style={{ transitionDelay: `${index * 200}ms` }}
           >
-            {/* Image side */}
             <div className={`creator-image-wrapper ${sde.glowClass}`}>
-              <img 
-                src={sde.image} 
-                alt={`${sde.name}'s portrait`} 
+              <img
+                src={sde.image}
+                alt={`${sde.name}'s portrait`}
                 className="creator-image"
                 onError={(e) => {
-                  e.target.src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80"; // fallback
+                  e.target.src =
+                    "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80";
                 }}
               />
             </div>
 
-            {/* Description side */}
             <div className="creator-info">
               <span className="creator-role">
                 {sde.icon}
                 {sde.role}
               </span>
+
               <h3 className="creator-name">{sde.name}</h3>
+
               <p className="creator-bio">{sde.bio}</p>
-              
-              <div className="creator-socials" style={{ display: 'flex', gap: '15px', margin: '5px 0 15px 0', alignItems: 'center' }}>
-                <a href={sde.github} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label={`${sde.name} GitHub`}>
-                  <Github size={18} />
+
+              <div
+                className="creator-socials"
+                style={{
+                  display: 'flex',
+                  gap: '15px',
+                  margin: '5px 0 15px 0',
+                  alignItems: 'center'
+                }}
+              >
+                <a
+                  href={sde.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  aria-label={`${sde.name} GitHub`}
+                >
+                  <FaGithub size={18} />
                 </a>
-                <a href={sde.linkedin} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label={`${sde.name} LinkedIn`}>
-                  <Linkedin size={18} />
+
+                <a
+                  href={sde.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  aria-label={`${sde.name} LinkedIn`}
+                >
+                  <FaLinkedin size={18} />
                 </a>
-                <button 
-                  onClick={sde.name === 'Daksh' ? onViewDaksh : onViewDrishti}
+
+                <button
+                  onClick={
+                    sde.name === 'Daksh'
+                      ? onViewDaksh
+                      : onViewDrishti
+                  }
                   className="btn btn-primary"
                   style={{
                     padding: '6px 16px',
@@ -108,7 +168,7 @@ export default function AboutNow({ onBackToHome, onViewDaksh, onViewDrishti }) {
                   Explore Portfolio
                 </button>
               </div>
-              
+
               <div className="creator-skills">
                 {sde.skills.map((skill, idx) => (
                   <span key={idx} className="skill-tag">
