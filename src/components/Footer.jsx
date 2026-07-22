@@ -1,4 +1,5 @@
-import { Terminal, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Terminal, Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
